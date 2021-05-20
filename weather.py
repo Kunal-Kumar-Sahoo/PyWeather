@@ -30,7 +30,7 @@ window.title("PyWeather")
 f = ("ubuntu", 15, "bold")
 t = ("ubuntu", 35, "bold")
 
-textField = tk.Entry(window, font=t)
+textField = tk.Entry(window, justify="center",font=t)
 textField.pack(pady=20)
 textField.focus()
 textField.bind("<Return>", getWeatherInfo)
