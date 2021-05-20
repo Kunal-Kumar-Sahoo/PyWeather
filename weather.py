@@ -4,7 +4,10 @@ import time
 
 def getWeatherInfo(window):
     city = textField.get()
-    API = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=47b2c289288f3d0c362470798f52f9b6"
+    API = ""
+    
+    # To get your API visit: https://openweathermap.org/
+
     jsonData = requests.get(API).json()
     weatherCondition = jsonData["weather"][0]["main"]
     temperature = int(jsonData["main"]["temp"] - 273.15)
